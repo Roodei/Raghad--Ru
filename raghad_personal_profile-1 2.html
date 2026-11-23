@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal portfolio & profile of Raghad Mohammed Junaid Bawazir (Rody / Rou) - Information Technology Student & Creative Enthusiast.">
+  <title>Raghad Bawazir | Personal Portfolio & IT Creative</title>
+
+  <!-- Google Fonts Preconnect & Stylesheets (English & Arabic Typography) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,600&display=swap" rel="stylesheet">
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Scroll Reading Progress Indicator -->
+  <div class="scroll-progress-bar" id="scrollProgressBar" aria-hidden="true"></div>
+
+  <!-- Ambient Light Orbs -->
+  <div class="ambient-bg" aria-hidden="true">
+    <div class="ambient-orb orb-1"></div>
+    <div class="ambient-orb orb-2"></div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="site-header" id="siteHeader">
+    <div class="wrap navbar">
+      <a href="#home" class="brand-logo" aria-label="Raghad Bawazir Home">
+        Raghad<span class="dot">.</span>
+        <span class="brand-sub">Portfolio</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link" data-i18n="nav_about">About</a></li>
+          <li><a href="#journey" class="nav-link" data-i18n="journey_title">Journey</a></li>
+          <li><a href="#skills" class="nav-link" data-i18n="nav_skills">Skills</a></li>
+          <li><a href="#projects" class="nav-link" data-i18n="nav_projects">Projects</a></li>
+          <li><a href="#palettes" class="nav-link" data-i18n="nav_palettes">Color Studio</a></li>
+          <li><a href="#hobbies" class="nav-link" data-i18n="nav_hobbies">Hobbies</a></li>
+          <li><a href="#contact" class="nav-link" data-i18n="nav_contact">Connect</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Language Switcher Toggle (EN / AR) -->
+        <button class="lang-toggle-btn" id="langToggle" aria-label="Toggle Arabic / English" title="تبديل اللغة">
+          <span aria-hidden="true">🌐</span>
+          <span id="langLabel">العربية</span>
+        </button>
+
+        <!-- UI Audio Feedback Toggle -->
+        <button class="sound-toggle-btn muted" id="soundToggle" aria-label="Toggle Sound Effects" title="Enable UI Sounds">
+          <svg class="sound-on-icon" viewBox="0 0 24 24"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+          <svg class="sound-off-icon" viewBox="0 0 24 24"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
+        </button>
+
+        <!-- Theme Toggle (Light / Dark) -->
+        <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle Dark / Light Theme" title="Toggle Theme">
+          <svg class="sun-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="moon-icon" style="display:none;" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+
+        <a href="#contact" class="nav-cta">
+          <span data-i18n="nav_cta">Get in Touch</span>
+          <span aria-hidden="true">→</span>
+        </a>
+
+        <!-- Mobile Menu Hamburger Button -->
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav-drawer" id="mobileDrawer">
+    <a href="#about" class="mobile-nav-link" data-i18n="nav_about">About</a>
+    <a href="#journey" class="mobile-nav-link" data-i18n="journey_title">Journey</a>
+    <a href="#skills" class="mobile-nav-link" data-i18n="nav_skills">Skills</a>
+    <a href="#projects" class="mobile-nav-link" data-i18n="nav_projects">Projects</a>
+    <a href="#palettes" class="mobile-nav-link" data-i18n="nav_palettes">Color Studio</a>
+    <a href="#hobbies" class="mobile-nav-link" data-i18n="nav_hobbies">Hobbies</a>
+    <a href="#contact" class="mobile-nav-link" data-i18n="nav_contact">Connect</a>
+  </div>
+
+  <main>
+    <!-- ========================================================================
+         Hero Section
+         ======================================================================== -->
+    <section class="hero-section" id="home">
+      <div class="wrap">
+        <div class="hero-container">
+          <div class="hero-content">
+            <div class="status-badge">
+              <span class="status-dot"></span>
+              <span data-i18n="status_text">Available for IT & Design Collaborations · KSA</span>
+              <span class="live-clock-pill">🕒 <span id="liveClock">--:--</span></span>
+            </div>
+
+            <h1 class="hero-title" data-i18n="hero_title">
+              Hello, I'm<br>
+              <em>Raghad Bawazir.</em>
+            </h1>
+
+            <p class="hero-desc" data-i18n="hero_desc">
+              A curious <strong>Information Technology student at Arab University</strong> who passionately bridges the gap between clean digital systems, visual elegance, and creative aesthetics. You can call me <strong>Rody</strong> or <strong>Rou</strong>.
+            </p>
+
+            <div class="hero-tags">
+              <span class="hero-tag" data-i18n="hero_tag_it">✦ Information Technology</span>
+              <span class="hero-tag" data-i18n="hero_tag_creative">✧ Creative Mindset</span>
+              <span class="hero-tag" data-i18n="hero_tag_ui">⌘ UI & Aesthetic Design</span>
+              <span class="hero-tag" data-i18n="hero_tag_explore">↗ Continuous Explorer</span>
+            </div>
+
+            <div class="hero-cta-group">
+              <a href="#about" class="btn-primary">
+                <span data-i18n="hero_btn_explore">Explore Profile</span>
+                <span aria-hidden="true">↓</span>
+              </a>
+              <a href="#contact" class="btn-secondary">
+                <span data-i18n="hero_btn_contact">Contact Me</span>
+                <span aria-hidden="true">✉</span>
+              </a>
+              <button class="btn-outline-print" onclick="printProfileSummary()">
+                <span aria-hidden="true">📄</span>
+                <span data-i18n="hero_btn_cv">Print / Save CV</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="portrait-wrapper">
+              <div class="portrait-aura"></div>
+              
+              <div class="portrait-frame">
+                <img class="portrait-img" src="assets/portrait.jpg" alt="Portrait of Raghad Mohammed Junaid Bawazir" loading="eager">
+              </div>
+
+              <!-- Floating Interactive Glassmorphic Chips -->
+              <div class="floating-chip chip-top">
+                <div class="chip-icon">🎓</div>
+                <div>
+                  <div style="font-size:0.68rem; color:var(--text-muted); text-transform:uppercase;" data-i18n="chip_student_role">Student</div>
+                  <div data-i18n="chip_student_val">Arab University · IT</div>
+                </div>
+              </div>
+
+              <div class="floating-chip chip-bottom">
+                <div class="chip-icon">✨</div>
+                <div>
+                  <div style="font-size:0.68rem; color:var(--text-muted); text-transform:uppercase;" data-i18n="chip_persona_role">Persona</div>
+                  <div data-i18n="chip_persona_val">Rody / Rou</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         About Me Section (Bento Grid)
+         ======================================================================== -->
+    <section class="content-section" id="about">
+      <div class="wrap">
+        <div class="section-header">
+          <span class="section-eyebrow" data-i18n="about_eyebrow">WHO I AM</span>
+          <h2 class="section-title" data-i18n="about_title">About Me</h2>
+          <p class="section-subtitle" data-i18n="about_subtitle">
+            Blending technological curiosity with artistic intuition to create engaging, memorable experiences.
+          </p>
+        </div>
+
+        <div class="about-bento">
+          <!-- Main Narrative Bio Card -->
+          <article class="bento-card bento-bio">
+            <div class="bento-bio-content">
+              <h3 data-i18n="about_bio_title">Nice to meet you!</h3>
+              <p data-i18n="about_bio_p1">
+                My name is <strong>Raghad Mohammed Junaid Bawazir</strong>. I am currently pursuing my degree in <strong>Information Technology at Arab University</strong>. I have always been fascinated by how technology functions beneath the surface, paired with an instinct for visual harmony, styling, and human-centered design.
+              </p>
+              <p data-i18n="about_bio_p2">
+                I believe that every new skill, project, and experience is a valuable opportunity to evolve. Whether studying modern IT architectures or expressing my individuality through beauty, fashion, and art, I approach everything with keen attention to detail and authenticity.
+              </p>
+            </div>
+            <div class="bento-quote-mini" data-i18n="about_quote">
+              “Every skill mastered is a new lens through which to experience the world.”
+            </div>
+          </article>
+
+          <!-- Fast Facts Profile Card -->
+          <article class="bento-card bento-facts">
+            <h3 data-i18n="facts_title">Profile Summary</h3>
+            <div class="facts-list">
+              <div class="fact-item">
+                <span class="fact-label" data-i18n="fact_label_name">Full Name</span>
+                <span class="fact-val" data-i18n="fact_val_name">Raghad Mohammed Bawazir</span>
+              </div>
+              <div class="fact-item">
+                <span class="fact-label" data-i18n="fact_label_nick">Nickname</span>
+                <span class="fact-val" data-i18n="fact_val_nick">Rody / Rou</span>
+              </div>
+              <div class="fact-item">
+                <span class="fact-label" data-i18n="fact_label_major">Academic Major</span>
+                <span class="fact-val" data-i18n="fact_val_major">Information Technology</span>
+              </div>
+              <div class="fact-item">
+                <span class="fact-label" data-i18n="fact_label_uni">University</span>
+                <span class="fact-val" data-i18n="fact_val_uni">Arab University</span>
+              </div>
+              <div class="fact-item">
+                <span class="fact-label" data-i18n="fact_label_interests">Core Interests</span>
+                <span class="fact-val" data-i18n="fact_val_interests">IT, UI Design, Fashion, Arts</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3 Mini Pillars -->
+          <article class="bento-card bento-pillar">
+            <span class="pillar-num">01</span>
+            <h4 class="pillar-title" data-i18n="pillar_1_title">Technical Foundation</h4>
+            <p class="pillar-desc" data-i18n="pillar_1_desc">
+              Strong grasp of Information Technology fundamentals, system analysis, and logical digital problem solving.
+            </p>
+          </article>
+
+          <article class="bento-card bento-pillar">
+            <span class="pillar-num">02</span>
+            <h4 class="pillar-title" data-i18n="pillar_2_title">Aesthetic Direction</h4>
+            <p class="pillar-desc" data-i18n="pillar_2_desc">
+              Passionate eye for color theory, proportion, trend analysis, and expressive makeup and fashion styling.
+            </p>
+          </article>
+
+          <article class="bento-card bento-pillar">
+            <span class="pillar-num">03</span>
+            <h4 class="pillar-title" data-i18n="pillar_3_title">Active Curiosity</h4>
+            <p class="pillar-desc" data-i18n="pillar_3_desc">
+              An energetic lifestyle embracing adventure, music, sports, and traditional arts like Arabic calligraphy.
+            </p>
+          </article>
+        </div>
+
+        <!-- ====================================================================
+             Academic & Creative Journey Roadmap (Timeline)
+             ==================================================================== -->
+        <div class="journey-timeline-section" id="journey">
+          <div class="section-header" style="margin-bottom: 24px;">
+            <span class="section-eyebrow" data-i18n="journey_eyebrow">ACADEMIC & PASSION ROADMAP</span>
+            <h3 class="section-title" style="font-size: clamp(1.8rem, 3.5vw, 2.6rem);" data-i18n="journey_title">My Journey & Milestones</h3>
+            <p class="section-subtitle" data-i18n="journey_subtitle">
+              The milestones and learning experiences shaping my perspective as an IT specialist and creative explorer.
+            </p>
+          </div>
+
+          <div class="journey-timeline">
+            <!-- Milestone 1 -->
+            <div class="timeline-item">
+              <div class="timeline-marker">🎓</div>
+              <div class="timeline-card">
+                <div class="timeline-header">
+                  <span class="timeline-date" data-i18n="journey_1_date">2023 - Present</span>
+                  <span class="timeline-org" data-i18n="journey_1_org">Arab University</span>
+                </div>
+                <h4 class="timeline-title" data-i18n="journey_1_title">Bachelor of Information Technology</h4>
+                <p class="timeline-desc" data-i18n="journey_1_desc">
+                  Pursuing academic studies in software logic, database architecture, network fundamentals, and human-computer interaction.
+                </p>
+              </div>
+            </div>
+
+            <!-- Milestone 2 -->
+            <div class="timeline-item">
+              <div class="timeline-marker">⌘</div>
+              <div class="timeline-card">
+                <div class="timeline-header">
+                  <span class="timeline-date" data-i18n="journey_2_date">2024</span>
+                  <span class="timeline-org" data-i18n="journey_2_org">Self-Directed & Applied Projects</span>
+                </div>
+                <h4 class="timeline-title" data-i18n="journey_2_title">UI/UX & Interactive Design Craft</h4>
+                <p class="timeline-desc" data-i18n="journey_2_desc">
+                  Deepening skills in interface prototyping, user journey mapping, visual hierarchy, and creating accessible, aesthetically pleasing digital spaces.
+                </p>
+              </div>
+            </div>
+
+            <!-- Milestone 3 -->
+            <div class="timeline-item">
+              <div class="timeline-marker">✦</div>
+              <div class="timeline-card">
+                <div class="timeline-header">
+                  <span class="timeline-date" data-i18n="journey_3_date">2025</span>
+                  <span class="timeline-org" data-i18n="journey_3_org">Creative Practice</span>
+                </div>
+                <h4 class="timeline-title" data-i18n="journey_3_title">Advanced Beauty Artistry & Trend Styling</h4>
+                <p class="timeline-desc" data-i18n="journey_3_desc">
+                  Mastering color harmony, undertone balancing, editorial makeup techniques, and seasonal wardrobe curation.
+                </p>
+              </div>
+            </div>
+
+            <!-- Milestone 4 -->
+            <div class="timeline-item">
+              <div class="timeline-marker">✒</div>
+              <div class="timeline-card">
+                <div class="timeline-header">
+                  <span class="timeline-date" data-i18n="journey_4_date">Ongoing</span>
+                  <span class="timeline-org" data-i18n="journey_4_org">Life Passions</span>
+                </div>
+                <h4 class="timeline-title" data-i18n="journey_4_title">Arabic Calligraphy & Athletic Lifestyle</h4>
+                <p class="timeline-desc" data-i18n="journey_4_desc">
+                  Practicing the geometric precision of Arabic calligraphy strokes while cultivating physical vitality through sports, fitness, and dance.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Skills & Expertise Section
+         ======================================================================== -->
+    <section class="content-section" id="skills" style="background: var(--bg-surface-elevated);">
+      <div class="wrap">
+        <div class="section-header">
+          <span class="section-eyebrow" data-i18n="skills_eyebrow">WHAT I ENJOY DOING</span>
+          <h2 class="section-title" data-i18n="skills_title">My Skills & Expertise</h2>
+          <p class="section-subtitle" data-i18n="skills_subtitle">
+            A versatile toolkit shaped by modern technology, visual interface craft, and styling passion.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Skill 1: Makeup -->
+          <article class="skill-card">
+            <div>
+              <div class="skill-icon-box" aria-hidden="true">✦</div>
+              <h3 class="skill-title" data-i18n="skill_1_title">Makeup & Beauty</h3>
+              <p class="skill-desc" data-i18n="skill_1_desc">
+                Conceptualizing personalized looks, understanding skin undertones, mastering color harmony, and exploring innovative beauty techniques.
+              </p>
+            </div>
+            <div class="skill-pill-wrap">
+              <span class="skill-pill">Color Theory</span>
+              <span class="skill-pill">Creative Looks</span>
+              <span class="skill-pill">Precision Details</span>
+              <span class="skill-pill">Style Consultation</span>
+            </div>
+          </article>
+
+          <!-- Skill 2: Fashion -->
+          <article class="skill-card">
+            <div>
+              <div class="skill-icon-box" aria-hidden="true">✧</div>
+              <h3 class="skill-title" data-i18n="skill_2_title">Fashion Styling</h3>
+              <p class="skill-desc" data-i18n="skill_2_desc">
+                Curating cohesive fashion statements, keeping up with global seasonal trends, silhouette balancing, and creating distinct personal aesthetics.
+              </p>
+            </div>
+            <div class="skill-pill-wrap">
+              <span class="skill-pill">Trend Forecasting</span>
+              <span class="skill-pill">Outfit Curation</span>
+              <span class="skill-pill">Moodboard Design</span>
+              <span class="skill-pill">Visual Balance</span>
+            </div>
+          </article>
+
+          <!-- Skill 3: UI Design -->
+          <article class="skill-card">
+            <div>
+              <div class="skill-icon-box" aria-hidden="true">⌘</div>
+              <h3 class="skill-title" data-i18n="skill_3_title">UI & Interface Design</h3>
+              <p class="skill-desc" data-i18n="skill_3_desc">
+                Designing intuitive, modern user interfaces that combine clean visual hierarchy with comfortable, accessible digital user experiences.
+              </p>
+            </div>
+            <div class="skill-pill-wrap">
+              <span class="skill-pill">UI Layouts</span>
+              <span class="skill-pill">Visual Hierarchy</span>
+              <span class="skill-pill">User Centered</span>
+              <span class="skill-pill">Clean Aesthetics</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Featured Projects & Creations Section (PORTFOLIO)
+         ======================================================================== -->
+    <section class="content-section" id="projects">
+      <div class="wrap">
+        <div class="section-header">
+          <span class="section-eyebrow" data-i18n="projects_eyebrow">PORTFOLIO & CREATIONS</span>
+          <h2 class="section-title" data-i18n="projects_title">Featured Works & Concepts</h2>
+          <p class="section-subtitle" data-i18n="projects_subtitle">
+            A curated selection of technical IT systems, user interface designs, and creative artistic explorations.
+          </p>
+        </div>
+
+        <!-- Project Filter Tabs -->
+        <div class="filter-tabs">
+          <button class="filter-btn project-filter-btn active" data-project-filter="all" data-i18n="proj_filter_all">All Works</button>
+          <button class="filter-btn project-filter-btn" data-project-filter="it" data-i18n="proj_filter_it">IT & Systems</button>
+          <button class="filter-btn project-filter-btn" data-project-filter="ui" data-i18n="proj_filter_ui">UI/UX Design</button>
+          <button class="filter-btn project-filter-btn" data-project-filter="creative" data-i18n="proj_filter_creative">Creative & Arts</button>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: Aura Beauty E-Commerce -->
+          <article class="project-card" data-category="ui">
+            <div class="project-thumb">
+              <div class="project-thumb-bg" style="background: radial-gradient(circle at center, rgba(216, 137, 120, 0.28) 0%, rgba(223, 183, 92, 0.15) 100%);"></div>
+              <span class="project-category-badge">UI/UX · Beauty</span>
+              <div class="project-thumb-visual">
+                <div class="project-symbol-large">💄</div>
+                <div style="font-size:0.75rem; letter-spacing:0.1em; color:var(--text-muted); text-transform:uppercase;">E-Commerce Design System</div>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Aura Cosmetics & Skincare Concept</h3>
+              <p class="project-desc">
+                A luxury digital cosmetic store UI featuring interactive skin undertone quizzes, customizable shade matching, and an accessible warm pearl design system.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Figma</span>
+                <span class="project-tag">Design System</span>
+                <span class="project-tag">Color Theory</span>
+                <span class="project-tag">Mobile First</span>
+              </div>
+              <button class="project-btn" data-project="aura">
+                <span data-i18n="proj_view_btn">View Details</span>
+                <span aria-hidden="true">→</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Project 2: Arab University Campus Hub -->
+          <article class="project-card" data-category="it">
+            <div class="project-thumb">
+              <div class="project-thumb-bg" style="background: radial-gradient(circle at center, rgba(16, 185, 129, 0.2) 0%, rgba(179, 134, 40, 0.15) 100%);"></div>
+              <span class="project-category-badge">IT Architecture</span>
+              <div class="project-thumb-visual">
+                <div class="project-symbol-large">🏛️</div>
+                <div style="font-size:0.75rem; letter-spacing:0.1em; color:var(--text-muted); text-transform:uppercase;">Academic Information Portal</div>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Arab University Student Campus Hub</h3>
+              <p class="project-desc">
+                An integrated student portal designed to manage course registrations, academic transcripts, technical support tickets, and university schedules with clean system architecture.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">System Analysis</span>
+                <span class="project-tag">Database Schema</span>
+                <span class="project-tag">IT Portal</span>
+                <span class="project-tag">Responsive</span>
+              </div>
+              <button class="project-btn" data-project="campus">
+                <span data-i18n="proj_view_btn">View Details</span>
+                <span aria-hidden="true">→</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Project 3: Harf & Nuqta Calligraphy -->
+          <article class="project-card" data-category="creative">
+            <div class="project-thumb">
+              <div class="project-thumb-bg" style="background: radial-gradient(circle at center, rgba(179, 134, 40, 0.3) 0%, rgba(31, 29, 36, 0.25) 100%);"></div>
+              <span class="project-category-badge">Typography · Art</span>
+              <div class="project-thumb-visual">
+                <div class="project-symbol-large">✒</div>
+                <div style="font-size:0.75rem; letter-spacing:0.1em; color:var(--text-muted); text-transform:uppercase;">Digital Arabic Calligraphy</div>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Harf & Nuqta (حرف ونقطة) Calligraphy</h3>
+              <p class="project-desc">
+                A digital typographic series bridging traditional Thuluth script geometries with vector precision, exploring negative space and gold leaf aesthetic harmonies.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Arabic Calligraphy</span>
+                <span class="project-tag">Vector Art</span>
+                <span class="project-tag">Typography</span>
+                <span class="project-tag">Heritage</span>
+              </div>
+              <button class="project-btn" data-project="harf">
+                <span data-i18n="proj_view_btn">View Details</span>
+                <span aria-hidden="true">→</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Project 4: StyleSphere Wardrobe -->
+          <article class="project-card" data-category="creative">
+            <div class="project-thumb">
+              <div class="project-thumb-bg" style="background: radial-gradient(circle at center, rgba(223, 183, 92, 0.3) 0%, rgba(216, 137, 120, 0.2) 100%);"></div>
+              <span class="project-category-badge">Fashion · Styling</span>
+              <div class="project-thumb-visual">
+                <div class="project-symbol-large">👗</div>
+                <div style="font-size:0.75rem; letter-spacing:0.1em; color:var(--text-muted); text-transform:uppercase;">Wardrobe Moodboards</div>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">StyleSphere Wardrobe & Moodboards</h3>
+              <p class="project-desc">
+                An intelligent styling guide and seasonal color palette curator to create harmonious wardrobe looks tailored to skin undertones and contemporary silhouettes.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Fashion Styling</span>
+                <span class="project-tag">Palette Curation</span>
+                <span class="project-tag">Trend Forecasting</span>
+                <span class="project-tag">Editorial</span>
+              </div>
+              <button class="project-btn" data-project="stylesphere">
+                <span data-i18n="proj_view_btn">View Details</span>
+                <span aria-hidden="true">→</span>
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Aesthetic Color Studio (Interactive Color Harmony & Swatches)
+         ======================================================================== -->
+    <section class="content-section" id="palettes" style="background: var(--bg-surface-elevated);">
+      <div class="wrap">
+        <div class="section-header">
+          <span class="section-eyebrow" data-i18n="palettes_eyebrow">COLOR THEORY & HARMONY</span>
+          <h2 class="section-title" data-i18n="palettes_title">Aesthetic Color Studio</h2>
+          <p class="section-subtitle" data-i18n="palettes_subtitle">
+            Where technology meets aesthetic sensibility. Click any color swatch to copy its HEX code, or preview the palette live.
+          </p>
+        </div>
+
+        <div class="palettes-grid">
+          <!-- Palette 1: Champagne Silk -->
+          <article class="palette-card">
+            <div class="palette-title">Champagne Silk & Gold</div>
+            <div class="palette-swatches">
+              <div class="swatch-item" style="background:#1E1B18;" data-hex="#1E1B18" title="Click to copy #1E1B18"></div>
+              <div class="swatch-item" style="background:#575249;" data-hex="#575249" title="Click to copy #575249"></div>
+              <div class="swatch-item" style="background:#B38628;" data-hex="#B38628" title="Click to copy #B38628"></div>
+              <div class="swatch-item" style="background:#DFB75C;" data-hex="#DFB75C" title="Click to copy #DFB75C"></div>
+              <div class="swatch-item" style="background:#FBF9F4;" data-hex="#FBF9F4" title="Click to copy #FBF9F4"></div>
+            </div>
+            <button class="palette-apply-btn" data-preview-bg="#FBF9F4" data-preview-text="#1E1B18" data-preview-sub="#575249" data-preview-accent="#B38628" data-preview-btntext="#ffffff" data-i18n="palette_apply_btn">
+              Apply to Live Preview
+            </button>
+          </article>
+
+          <!-- Palette 2: Desert Rose -->
+          <article class="palette-card">
+            <div class="palette-title">Desert Rose & Blush</div>
+            <div class="palette-swatches">
+              <div class="swatch-item" style="background:#2E1C1A;" data-hex="#2E1C1A" title="Click to copy #2E1C1A"></div>
+              <div class="swatch-item" style="background:#8A4B38;" data-hex="#8A4B38" title="Click to copy #8A4B38"></div>
+              <div class="swatch-item" style="background:#D88978;" data-hex="#D88978" title="Click to copy #D88978"></div>
+              <div class="swatch-item" style="background:#F7E7E2;" data-hex="#F7E7E2" title="Click to copy #F7E7E2"></div>
+              <div class="swatch-item" style="background:#FFF8F5;" data-hex="#FFF8F5" title="Click to copy #FFF8F5"></div>
+            </div>
+            <button class="palette-apply-btn" data-preview-bg="#FFF8F5" data-preview-text="#2E1C1A" data-preview-sub="#8A4B38" data-preview-accent="#D88978" data-preview-btntext="#ffffff" data-i18n="palette_apply_btn">
+              Apply to Live Preview
+            </button>
+          </article>
+
+          <!-- Palette 3: Royal Velvet Noir -->
+          <article class="palette-card">
+            <div class="palette-title">Royal Velvet Noir</div>
+            <div class="palette-swatches">
+              <div class="swatch-item" style="background:#0F0E11;" data-hex="#0F0E11" title="Click to copy #0F0E11"></div>
+              <div class="swatch-item" style="background:#1F1D24;" data-hex="#1F1D24" title="Click to copy #1F1D24"></div>
+              <div class="swatch-item" style="background:#DCB353;" data-hex="#DCB353" title="Click to copy #DCB353"></div>
+              <div class="swatch-item" style="background:#C2BCB0;" data-hex="#C2BCB0" title="Click to copy #C2BCB0"></div>
+              <div class="swatch-item" style="background:#F8F6F0;" data-hex="#F8F6F0" title="Click to copy #F8F6F0"></div>
+            </div>
+            <button class="palette-apply-btn" data-preview-bg="#17161B" data-preview-text="#F8F6F0" data-preview-sub="#C2BCB0" data-preview-accent="#DCB353" data-preview-btntext="#0F0E11" data-i18n="palette_apply_btn">
+              Apply to Live Preview
+            </button>
+          </article>
+
+          <!-- Palette 4: Cyber Lavender IT -->
+          <article class="palette-card">
+            <div class="palette-title">Cyber Lavender IT</div>
+            <div class="palette-swatches">
+              <div class="swatch-item" style="background:#13111C;" data-hex="#13111C" title="Click to copy #13111C"></div>
+              <div class="swatch-item" style="background:#382C54;" data-hex="#382C54" title="Click to copy #382C54"></div>
+              <div class="swatch-item" style="background:#8B5CF6;" data-hex="#8B5CF6" title="Click to copy #8B5CF6"></div>
+              <div class="swatch-item" style="background:#DDD6FE;" data-hex="#DDD6FE" title="Click to copy #DDD6FE"></div>
+              <div class="swatch-item" style="background:#F5F3FF;" data-hex="#F5F3FF" title="Click to copy #F5F3FF"></div>
+            </div>
+            <button class="palette-apply-btn" data-preview-bg="#F5F3FF" data-preview-text="#13111C" data-preview-sub="#382C54" data-preview-accent="#8B5CF6" data-preview-btntext="#ffffff" data-i18n="palette_apply_btn">
+              Apply to Live Preview
+            </button>
+          </article>
+        </div>
+
+        <!-- Live Sandbox Harmony Preview Box -->
+        <div class="palette-preview-box" id="palettePreviewBox">
+          <div class="palette-preview-content">
+            <h3 class="palette-preview-title" data-i18n="palette_preview_title">Live Harmony Preview Sandbox</h3>
+            <p class="palette-preview-desc" data-i18n="palette_preview_desc">
+              This interactive card live-updates to reflect the selected color palette. Experience how typography, buttons, and backgrounds harmonize seamlessly.
+            </p>
+          </div>
+          <div>
+            <button class="palette-preview-btn" onclick="playUiSound('success')">
+              <span data-i18n="palette_preview_sample_btn">Explore Concept</span>
+              <span aria-hidden="true">✦</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Hobbies & Interests Section
+         ======================================================================== -->
+    <section class="content-section" id="hobbies">
+      <div class="wrap">
+        <div class="section-header">
+          <span class="section-eyebrow" data-i18n="hobbies_eyebrow">MY FAVORITE WAYS TO SPEND TIME</span>
+          <h2 class="section-title" data-i18n="hobbies_title">Hobbies & Passions</h2>
+          <p class="section-subtitle" data-i18n="hobbies_subtitle">
+            The activities, sounds, and sports that spark inspiration and recharge my creative energy.
+          </p>
+        </div>
+
+        <!-- Category Filter Tabs -->
+        <div class="filter-tabs">
+          <button class="filter-btn hobby-filter-btn active" data-filter="all" data-i18n="hobbies_filter_all">All Interests</button>
+          <button class="filter-btn hobby-filter-btn" data-filter="creative" data-i18n="hobbies_filter_creative">Creative & Beauty</button>
+          <button class="filter-btn hobby-filter-btn" data-filter="active" data-i18n="hobbies_filter_active">Active & Adventure</button>
+          <button class="filter-btn hobby-filter-btn" data-filter="arts" data-i18n="hobbies_filter_arts">Art & Expression</button>
+        </div>
+
+        <div class="hobbies-grid">
+          <!-- 1: Makeup -->
+          <article class="hobby-card" data-category="creative">
+            <div class="hobby-top">
+              <div class="hobby-symbol">💄</div>
+              <span class="hobby-badge">Beauty</span>
+            </div>
+            <h3 class="hobby-title" data-i18n="hobby_1_title">Makeup Artistry</h3>
+            <p class="hobby-text" data-i18n="hobby_1_desc">
+              Beauty, colors, and creative looks. Playing with shades and artistic textures to produce uplifting visual expressions.
+            </p>
+          </article>
+
+          <!-- 2: Sports -->
+          <article class="hobby-card" data-category="active">
+            <div class="hobby-top">
+              <div class="hobby-symbol">⚡</div>
+              <span class="hobby-badge">Active</span>
+            </div>
+            <h3 class="hobby-title" data-i18n="hobby_2_title">Sports & Fitness</h3>
+            <p class="hobby-text" data-i18n="hobby_2_desc">
+              Enjoying all kinds of athletic activities, staying fit, and cultivating resilience and energy through movement.
+            </p>
+          </article>
+
+          <!-- 3: Adventure -->
+          <article class="hobby-card" data-category="active">
+            <div class="hobby-top">
+              <div class="hobby-symbol">🧭</div>
+              <span class="hobby-badge">Lifestyle</span>
+            </div>
+            <h3 class="hobby-title" data-i18n="hobby_3_title">Adventure & Exploration</h3>
+            <p class="hobby-text" data-i18n="hobby_3_desc">
+              Trying new things, visiting unfamiliar spots, and seeking exciting, unforgettable life experiences.
+            </p>
+          </article>
+
+          <!-- 4: Music -->
+          <article class="hobby-card" data-category="arts">
+            <div class="hobby-top">
+              <div class="hobby-symbol">♫</div>
+              <span class="hobby-badge">Music</span>
+            </div>
+            <h3 class="hobby-title" data-i18n="hobby_4_title">Music & Melody</h3>
+            <p class="hobby-text" data-i18n="hobby_4_desc">
+              Listening to varied songs, curating playlists, and discovering sounds and rhythms that inspire my thoughts.
+            </p>
+          </article>
+
+          <!-- 5: Dancing -->
+          <article class="hobby-card" data-category="active">
+            <div class="hobby-top">
+              <div class="hobby-symbol">♪</div>
+              <span class="hobby-badge">Expression</span>
+            </div>
+            <h3 class="hobby-title" data-i18n="hobby_5_title">Dancing & Rhythm</h3>
+            <p class="hobby-text" data-i18n="hobby_5_desc">
+              Expressing energy, vitality, and joy through dynamic dance, rhythm, and expressive bodily movement.
+            </p>
+          </article>
+
+          <!-- 6: Calligraphy -->
+          <article class="hobby-card" data-category="arts">
+            <div class="hobby-top">
+              <div class="hobby-symbol">✒</div>
+              <span class="hobby-badge">Tradition</span>
+            </div>
+            <h3 class="hobby-title" data-i18n="hobby_6_title">Arabic Calligraphy</h3>
+            <p class="hobby-text" data-i18n="hobby_6_desc">
+              Appreciating the architectural elegance of letterforms, precision ink strokes, and traditional detail.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Philosophy & Signature Quote
+         ======================================================================== -->
+    <section class="quote-section" id="philosophy">
+      <div class="wrap">
+        <div class="quote-box">
+          <p class="quote-text" data-i18n="philosophy_quote">
+            “Creativity is the way I express myself, and curiosity is what keeps me growing.”
+          </p>
+          <div class="quote-author">
+            <strong data-i18n="philosophy_author">Raghad Mohammed Bawazir</strong>
+            <span data-i18n="philosophy_sub">Information Technology Student · Arab University</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Interactive Contact & Connect Section
+         ======================================================================== -->
+    <section class="content-section" id="contact">
+      <div class="wrap">
+        <div class="section-header">
+          <span class="section-eyebrow" data-i18n="contact_eyebrow">LET'S CONNECT</span>
+          <h2 class="section-title" data-i18n="contact_title">Looking Forward to Connecting</h2>
+          <p class="section-subtitle" data-i18n="contact_desc">
+            Whether you want to discuss technology trends, user interface design, styling collaborations, or simply say hello — feel free to reach out!
+          </p>
+        </div>
+
+        <div class="contact-container">
+          <!-- Left Column: Direct Info & Badges -->
+          <div class="contact-card-info">
+            <div>
+              <span class="section-eyebrow">DIRECT CONTACT</span>
+              <h3>Get in Touch</h3>
+              <p>
+                Open for technology projects, UI/UX conceptualizing, and creative aesthetic inquiries.
+              </p>
+
+              <div class="contact-copy-box">
+                <div style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.12em; color:var(--text-muted); font-weight:700;">
+                  Official Inquiries
+                </div>
+                <div class="contact-row">
+                  <span style="font-weight:600; font-size:1.05rem;">raghad.bawazir@profile.me</span>
+                  <button class="contact-copy-btn" id="copyEmailBtn" onclick="copyContactEmail('raghad.bawazir@profile.me')">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                    <span data-i18n="contact_copy_btn">Copy</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-chips">
+              <span class="social-pill">🎓 Arab University</span>
+              <span class="social-pill">📍 Saudi Arabia</span>
+              <span class="social-pill">✨ Rody / Rou</span>
+              <button class="social-pill" onclick="printProfileSummary()" style="cursor:pointer;">
+                <span>📄</span>
+                <span data-i18n="hero_btn_cv">Print / Save CV</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Inquiry Form -->
+          <div class="contact-card-form">
+            <h3 data-i18n="contact_form_title">Send a Direct Message</h3>
+            <form class="contact-form" id="contactForm">
+              <div class="form-group">
+                <label class="form-label" for="formName" data-i18n="form_label_name">Your Name</label>
+                <input type="text" id="formName" class="form-control" placeholder="e.g. Sarah Al-Ahmad" data-i18n-placeholder="form_placeholder_name" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="formEmail" data-i18n="form_label_email">Email Address</label>
+                <input type="email" id="formEmail" class="form-control" placeholder="name@example.com" data-i18n-placeholder="form_placeholder_email" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="formSubject" data-i18n="form_label_subject">Topic / Interest</label>
+                <select id="formSubject" class="form-select">
+                  <option value="IT Collaboration" data-i18n="form_opt_it">IT & Tech Collaboration</option>
+                  <option value="UI/UX Design" data-i18n="form_opt_ui">UI/UX & Web Design</option>
+                  <option value="Styling Consultation" data-i18n="form_opt_style">Styling & Beauty Consultation</option>
+                  <option value="General Inquiry" data-i18n="form_opt_general">General Inquiry / Say Hello</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="formMessage" data-i18n="form_label_msg">Message</label>
+                <textarea id="formMessage" class="form-control" placeholder="Write your message or inquiry here..." data-i18n-placeholder="form_placeholder_msg" required></textarea>
+              </div>
+
+              <button type="submit" class="form-submit-btn">
+                <span data-i18n="form_submit_btn">Send Message</span>
+                <span aria-hidden="true">✉</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       Project Quick-View Modal Overlay
+       ======================================================================== -->
+  <div class="modal-overlay" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">✕</button>
+      <span class="modal-header-badge" id="modalBadge">Category</span>
+      <h3 class="modal-title" id="modalTitle">Project Title</h3>
+      <p class="modal-subtitle" id="modalSubtitle">Project Subtitle</p>
+      <p class="modal-desc" id="modalDesc">Detailed description</p>
+
+      <div class="modal-features-list" id="modalFeaturesList">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <div class="modal-tags" id="modalTagsWrap">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification for Copy / Form Actions -->
+  <div class="toast-msg" id="toastMsg" role="alert">
+    <span>✓</span>
+    <span>Action completed successfully!</span>
+  </div>
+
+  <!-- Floating Back-to-Top Button with Circular Progress -->
+  <button class="back-to-top-fab" id="backToTopFab" aria-label="Scroll back to top" title="Back to Top">
+    <svg class="progress-ring" viewBox="0 0 48 48">
+      <circle class="progress-ring-circle" id="progressRingCircle" cx="24" cy="24" r="22"></circle>
+    </svg>
+    <span style="font-size: 1.1rem; line-height: 1;">↑</span>
+  </button>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="wrap footer-content">
+      <div data-i18n="footer_text">
+        Made with care by <strong>Raghad Mohammed Junaid Bawazir</strong> · Personal Portfolio
+      </div>
+      <div>
+        <a href="#home" class="back-to-top">
+          <span data-i18n="back_to_top">Back to Top</span>
+          <span aria-hidden="true">↑</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- External JavaScript Controller -->
+  <script src="script.js"></script>
+</body>
+</html>
